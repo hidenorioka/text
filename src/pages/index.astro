@@ -1,10 +1,13 @@
 ---
 import Layout from "@src/layouts/Layout.astro";
-import logo from "/hidenorioka.svg";
 ---
 
 <Layout title="hidenorioka">
   <div class="h-full flex justify-center items-center">
-    <img src={logo} alt="hidenorioka" width="800" />
+    <h1
+      class="text-9xl font-bold text-transparent bg-clip-text bg-[url('/mask-image.jpg')] bg-no-repeat bg-center bg-cover tracking-[-1.6px]"
+    >
+      hidenorioka
+    </h1>
   </div>
 </Layout>
