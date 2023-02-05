@@ -1,0 +1,18 @@
+---
+export interface Props {
+  title: string;
+  href: string;
+  pubDate: string;
+}
+
+const { title, href, pubDate } = Astro.props;
+---
+
+<div class="rounded-sm bg-white">
+  <a class="block p-4" href={href}>
+    <div class="text-xs mb-2">{pubDate}</div>
+    <div class="text-xl whitespace-nowrap overflow-hidden text-ellipsis">
+      {title}
+    </div>
+  </a>
+</div>

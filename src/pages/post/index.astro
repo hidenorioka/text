@@ -1,5 +1,46 @@
 ---
 import Layout from "@src/layouts/Layout.astro";
+import Card from "@src/components/Card.astro";
 ---
 
-<Layout title="記事一覧 - hidenorioka">list</Layout>
+<Layout title="記事一覧 - hidenorioka">
+  <div class="h-full">
+    <div class="grid grid-cols-2 gap-4">
+      <div class="col-span-2">
+        <Card
+          title="記事のタイトル1"
+          href="/post/20230101"
+          pubDate="2023-01-01"
+        />
+      </div>
+      <div>
+        <Card
+          title="記事のタイトル2"
+          href="/post/20230102"
+          pubDate="2023-01-02"
+        />
+      </div>
+      <div>
+        <Card
+          title="記事のタイトル3"
+          href="/post/20230103"
+          pubDate="2023-01-03"
+        />
+      </div>
+      <div>
+        <Card
+          title="記事のタイトル4"
+          href="/post/20230104"
+          pubDate="2023-01-04"
+        />
+      </div>
+      <div>
+        <Card
+          title="記事のタイトル5"
+          href="/post/20230105"
+          pubDate="2023-01-05"
+        />
+      </div>
+    </div>
+  </div>
+</Layout>
