@@ -2,15 +2,15 @@
 export interface Props {
   title: string;
   href: string;
-  pubDate: string;
+  date: string;
 }
 
-const { title, href, pubDate } = Astro.props;
+const { title, href, date } = Astro.props;
 ---
 
 <div class="rounded-sm bg-white">
   <a class="block p-4" href={href}>
-    <div class="text-xs mb-2">{pubDate}</div>
+    <div class="text-xs mb-2">{date}</div>
     <div class="text-xl whitespace-nowrap overflow-hidden text-ellipsis">
       {title}
     </div>
