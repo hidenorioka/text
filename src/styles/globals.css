@@ -1,4 +1,6 @@
 :root {
   --header-height: 56px;
   --footer-height: 56px;
+  --max-content-width: 1200px;
+  --min-screen-width: 375px;
 }
