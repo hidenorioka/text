@@ -1,46 +1,38 @@
 ---
 import Layout from "@src/layouts/Layout.astro";
 import Card from "@src/components/Card.astro";
+import type { MDXLayoutProps } from "astro";
+
+interface MDXProps
+  extends MDXLayoutProps<{
+    title: string;
+    date: string;
+  }> {}
+
+const posts = await Astro.glob<MDXProps["frontmatter"]>("./*.mdx");
+
+const getWrapperStyle = (index: number) => {
+  return index === 0 ? { class: "col-span-2" } : null;
+};
 ---
 
-<Layout title="記事一覧 - hidenorioka">
+<Layout title="記事一覧">
   <div class="h-full">
+    <div class="my-8">
+      <h1 class="text-2xl text-center">記事一覧</h1>
+    </div>
     <div class="grid grid-cols-2 gap-4">
-      <div class="col-span-2">
-        <Card
-          title="記事のタイトル1"
-          href="/post/20230101"
-          pubDate="2023-01-01"
-        />
-      </div>
-      <div>
-        <Card
-          title="記事のタイトル2"
-          href="/post/20230102"
-          pubDate="2023-01-02"
-        />
-      </div>
-      <div>
-        <Card
-          title="記事のタイトル3"
-          href="/post/20230103"
-          pubDate="2023-01-03"
-        />
-      </div>
-      <div>
-        <Card
-          title="記事のタイトル4"
-          href="/post/20230104"
-          pubDate="2023-01-04"
-        />
-      </div>
-      <div>
-        <Card
-          title="記事のタイトル5"
-          href="/post/20230105"
-          pubDate="2023-01-05"
-        />
-      </div>
+      {
+        posts.map((post, index) => (
+          <div {...getWrapperStyle(index)}>
+            <Card
+              title={post.frontmatter.title}
+              href={post.url ?? ""}
+              date={post.frontmatter.date}
+            />
+          </div>
+        ))
+      }
     </div>
   </div>
 </Layout>
