@@ -3,7 +3,10 @@ import Layout from '@src/layouts/Layout.astro';
 ---
 
 <Layout title="hidenorioka">
-  <div class="h-full flex justify-center items-center">
+  <!-- FIXME: スクリーンサイズ-上下パディング幅-ヘッダーの高さ-フッターの高さ -->
+  <div
+    class="h-[calc(100vh_-_2rem_-_var(--header-height)_-_var(--footer-height))] flex justify-center items-center"
+  >
     <h1
       class="text-5xl sm:text-8xl md:text-9xl font-bold text-transparent bg-clip-text bg-[url('/mask-image.jpg')] bg-no-repeat bg-center bg-cover tracking-[-1.6px]"
     >
