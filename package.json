@@ -3,6 +3,7 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
+    "prepare": "husky install",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
@@ -17,7 +18,13 @@
     "tailwindcss": "^3.0.24"
   },
   "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.0",
     "prettier": "^2.8.3",
     "prettier-plugin-astro": "^0.8.0"
+  },
+  "lint-staged": {
+    "*.{md,mdx}": ["pnpm prettier"],
+    "*.{astro,js,ts}": ["pnpm prettier"]
   }
 }
