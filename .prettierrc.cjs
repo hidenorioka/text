@@ -3,13 +3,13 @@
 module.exports = {
   semi: true,
   singleQuote: true,
-  trailingComma: "all",
-  plugins: [require.resolve("prettier-plugin-astro")],
+  trailingComma: 'all',
+  plugins: [require.resolve('prettier-plugin-astro')],
   overrides: [
     {
-      files: "*.astro",
+      files: '*.astro',
       options: {
-        parser: "astro",
+        parser: 'astro',
       },
     },
   ],

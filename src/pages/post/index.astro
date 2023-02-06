@@ -1,7 +1,7 @@
 ---
-import Layout from "@src/layouts/Layout.astro";
-import Card from "@src/components/Card.astro";
-import type { MDXLayoutProps } from "astro";
+import Layout from '@src/layouts/Layout.astro';
+import Card from '@src/components/Card.astro';
+import type { MDXLayoutProps } from 'astro';
 
 interface MDXProps
   extends MDXLayoutProps<{
@@ -9,10 +9,10 @@ interface MDXProps
     date: string;
   }> {}
 
-const posts = await Astro.glob<MDXProps["frontmatter"]>("./*.mdx");
+const posts = await Astro.glob<MDXProps['frontmatter']>('./*.mdx');
 
 const getWrapperStyle = (index: number) => {
-  return index === 0 ? { class: "col-span-2" } : null;
+  return index === 0 ? { class: 'col-span-2' } : null;
 };
 ---
 
@@ -27,7 +27,7 @@ const getWrapperStyle = (index: number) => {
           <div {...getWrapperStyle(index)}>
             <Card
               title={post.frontmatter.title}
-              href={post.url ?? ""}
+              href={post.url ?? ''}
               date={post.frontmatter.date}
             />
           </div>
