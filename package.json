@@ -9,7 +9,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "prettier": "prettier --write --plugin-search-dir=."
+    "prettier": "prettier --write --plugin-search-dir=.",
+    "textlint": "textlint"
   },
   "dependencies": {
     "@astrojs/mdx": "^0.16.0",
@@ -18,13 +19,21 @@
     "tailwindcss": "^3.0.24"
   },
   "devDependencies": {
+    "@textlint/textlint-plugin-markdown": "^13.2.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.0",
     "prettier": "^2.8.3",
-    "prettier-plugin-astro": "^0.8.0"
+    "prettier-plugin-astro": "^0.8.0",
+    "textlint": "^13.2.0",
+    "textlint-rule-preset-ja-technical-writing": "^7.0.0"
   },
   "lint-staged": {
-    "*.{md,mdx}": ["pnpm prettier"],
-    "*.{astro,js,ts}": ["pnpm prettier"]
+    "*.{md,mdx}": [
+      "pnpm prettier",
+      "pnpm textlint"
+    ],
+    "*.{astro,js,ts}": [
+      "pnpm prettier"
+    ]
   }
 }
