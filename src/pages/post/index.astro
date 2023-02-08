@@ -9,11 +9,7 @@ interface MDXProps
     date: string;
   }> {}
 
-const posts = await Astro.glob<MDXProps['frontmatter']>('./*.mdx');
-
-const getWrapperStyle = (index: number) => {
-  return index === 0 ? { class: 'col-span-2' } : null;
-};
+const posts = await Astro.glob<MDXProps['frontmatter']>('./**/*.mdx');
 ---
 
 <Layout title="記事一覧">
@@ -23,8 +19,8 @@ const getWrapperStyle = (index: number) => {
     </div>
     <div class="grid grid-cols-2 gap-4">
       {
-        posts.map((post, index) => (
-          <div {...getWrapperStyle(index)}>
+        posts.map((post) => (
+          <div class="first:col-span-2">
             <Card
               title={post.frontmatter.title}
               href={post.url ?? ''}
