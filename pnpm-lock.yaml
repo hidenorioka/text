@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@astrojs/mdx': ^0.16.0
+  '@astrojs/mdx': ^0.18.0
   '@astrojs/tailwind': ^3.0.1
   astro: ^2.0.6
   husky: ^8.0.3
@@ -11,7 +11,7 @@ specifiers:
   tailwindcss: ^3.0.24
 
 dependencies:
-  '@astrojs/mdx': 0.16.0_astro@2.0.6
+  '@astrojs/mdx': 0.18.0_astro@2.0.6
   '@astrojs/tailwind': 3.0.1_jiulpwjund37q6yckwlgwo54mu
   astro: 2.0.6
   tailwindcss: 3.2.4
@@ -62,7 +62,7 @@ packages:
     peerDependencies:
       astro: ^2.0.2
     dependencies:
-      '@astrojs/prism': 2.0.0
+      '@astrojs/prism': 2.1.0
       astro: 2.0.6
       github-slugger: 1.5.0
       import-meta-resolve: 2.2.1
@@ -80,16 +80,40 @@ packages:
       - supports-color
     dev: false
 
-  /@astrojs/mdx/0.16.0_astro@2.0.6:
-    resolution: {integrity: sha512-HNk0FhNNthI7+pLmheJyPVU36dXE5l+9UwmmnrMV6COHNZIO2t+pnWnsushEDYZjpkYITDwnXKnQAtD8Mqj4xw==}
+  /@astrojs/markdown-remark/2.1.0_astro@2.0.6:
+    resolution: {integrity: sha512-w9T5o3UWQIfMcCkM2nLWrlfVQazh/7mw+2N/85QGcSUkZy6oNJoyy8Xz/ZkDhHLx8HPO0RT9fABR0B/H+aDaEw==}
+    peerDependencies:
+      astro: ^2.1.0
+    dependencies:
+      '@astrojs/prism': 2.1.0
+      astro: 2.0.6
+      github-slugger: 1.5.0
+      image-size: 1.0.2
+      import-meta-resolve: 2.2.1
+      rehype-raw: 6.1.1
+      rehype-stringify: 9.0.3
+      remark-gfm: 3.0.1
+      remark-parse: 10.0.1
+      remark-rehype: 10.1.0
+      remark-smartypants: 2.0.0
+      shiki: 0.11.1
+      unified: 10.1.2
+      unist-util-visit: 4.1.2
+      vfile: 5.3.6
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  /@astrojs/mdx/0.18.0_astro@2.0.6:
+    resolution: {integrity: sha512-mgICosefMpl67O7ER6Yi6ylT9Hk8ZAO6GhTlx4pYXIMOWFMQlP0NXQ9teZwPhOWzBcHWnsHEF+AzVZWbiC2EBg==}
     engines: {node: '>=16.12.0'}
     dependencies:
-      '@astrojs/markdown-remark': 2.0.1_astro@2.0.6
-      '@astrojs/prism': 2.0.0
-      '@mdx-js/mdx': 2.2.1
-      '@mdx-js/rollup': 2.2.1
+      '@astrojs/markdown-remark': 2.1.0_astro@2.0.6
+      '@astrojs/prism': 2.1.0
+      '@mdx-js/mdx': 2.3.0
+      '@mdx-js/rollup': 2.3.0
       acorn: 8.8.2
-      es-module-lexer: 0.10.5
+      es-module-lexer: 1.2.0
       estree-util-visit: 1.2.1
       github-slugger: 1.5.0
       gray-matter: 4.0.3
@@ -107,8 +131,8 @@ packages:
       - supports-color
     dev: false
 
-  /@astrojs/prism/2.0.0:
-    resolution: {integrity: sha512-YgeoeEPqsxaEpg0rwe/bUq3653LqSQnMjrLlpYwrbQQMQQqz6Y5yXN+RX3SfLJ6ppNb4+Fu2+Z49EXjk48Ihjw==}
+  /@astrojs/prism/2.1.0:
+    resolution: {integrity: sha512-+II6nfIFGZ7iH0FunhRGcj/J1mCxjcHl85cZRuFePKLoIhFHJT3nC3myQnUw386hUaIn2W20McxxtAVf4leeRQ==}
     engines: {node: '>=16.12.0'}
     dependencies:
       prismjs: 1.29.0
@@ -638,8 +662,8 @@ packages:
     resolution: {integrity: sha512-4/RWEeXDO6bocPONheFe6gX/oQdP/bEpv0oL4HqjPP5DCenBSt0mHgahppY49N0CpsaqffdwPq+TlX9CYOq2Dw==}
     dev: false
 
-  /@mdx-js/mdx/2.2.1:
-    resolution: {integrity: sha512-hZ3ex7exYLJn6FfReq8yTvA6TE53uW9UHJQM9IlSauOuS55J9y8RtA7W+dzp6Yrzr00/U1sd7q+Wf61q6SfiTQ==}
+  /@mdx-js/mdx/2.3.0:
+    resolution: {integrity: sha512-jLuwRlz8DQfQNiUCJR50Y09CGPq3fLtmtUQfVrj79E0JWu3dvsVcxVIcfhR5h0iXu+/z++zDrYeiJqifRynJkA==}
     dependencies:
       '@types/estree-jsx': 1.0.0
       '@types/mdx': 2.0.3
@@ -662,12 +686,12 @@ packages:
       - supports-color
     dev: false
 
-  /@mdx-js/rollup/2.2.1:
-    resolution: {integrity: sha512-wpGeK9iO7gPEIyC/ZTiggLY/MkEWDj5IWSsjlpkefgjb5RbmUukXU6/D2rHA+VAopxigS3NlaIL2ctpYBi4fmg==}
+  /@mdx-js/rollup/2.3.0:
+    resolution: {integrity: sha512-wLvRfJS/M4UmdqTd+WoaySEE7q4BIejYf1xAHXYvtT1du/1Tl/z2450Gg2+Hu7fh05KwRRiehiTP9Yc/Dtn0fA==}
     peerDependencies:
       rollup: '>=2'
     dependencies:
-      '@mdx-js/mdx': 2.2.1
+      '@mdx-js/mdx': 2.3.0
       '@rollup/pluginutils': 5.0.2
       source-map: 0.7.4
       vfile: 5.3.6
@@ -1382,12 +1406,12 @@ packages:
   /emoji-regex/9.2.2:
     resolution: {integrity: sha512-L18DaJsXSUk2+42pv8mLs5jJT2hqFkFE4j21wOmgbUqsZ2hL72NsUU785g9RXgo3s0ZNgVl42TiHp3ZtOv/Vyg==}
 
-  /es-module-lexer/0.10.5:
-    resolution: {integrity: sha512-+7IwY/kiGAacQfY+YBhKMvEmyAJnw5grTUgjG85Pe7vcUI/6b7pZjZG8nQ7+48YhzEAEqrEgD2dCz/JIK+AYvw==}
-    dev: false
-
   /es-module-lexer/1.1.0:
     resolution: {integrity: sha512-fJg+1tiyEeS8figV+fPcPpm8WqJEflG3yPU0NOm5xMvrNkuiy7HzX/Ljng4Y0hAoiw4/3hQTCFYw+ub8+a2pRA==}
+    dev: false
+
+  /es-module-lexer/1.2.0:
+    resolution: {integrity: sha512-2BMfqBDeVCcOlLaL1ZAfp+D868SczNpKArrTM3dhpd7dK/OVlogzY15qpUngt+LMTq5UC/csb9vVQAgupucSbA==}
     dev: false
 
   /esbuild/0.16.17:
@@ -1783,6 +1807,14 @@ packages:
 
   /ieee754/1.2.1:
     resolution: {integrity: sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==}
+    dev: false
+
+  /image-size/1.0.2:
+    resolution: {integrity: sha512-xfOoWjceHntRb3qFCrh5ZFORYH8XCdYpASltMhZ/Q0KZiOwjdE/Yl2QCiWdwD+lygV5bMCvauzgu5PxBX/Yerg==}
+    engines: {node: '>=14.0.0'}
+    hasBin: true
+    dependencies:
+      queue: 6.0.2
     dev: false
 
   /import-meta-resolve/2.2.1:
@@ -2994,6 +3026,12 @@ packages:
 
   /queue-microtask/1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
+    dev: false
+
+  /queue/6.0.2:
+    resolution: {integrity: sha512-iHZWu+q3IdFZFX36ro/lKBkSvfkztY5Y7HMiPlOUjhupPcG2JMfst2KKEpu5XndviX/3UhFbRngUPNKtgvtZiA==}
+    dependencies:
+      inherits: 2.0.4
     dev: false
 
   /quick-lru/5.1.1:
